@@ -2,7 +2,7 @@
 <widget id="ca.dmscorp.signmein" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Sign Me In</name>
     <description>
-        DMS Application for SignIn.
+        DMS Sign In Application - Single User Version.
     </description>
     <author email="f.zhang@dmscorp.ca" href="http://dmscorp.ca">
         DMS IT Development
