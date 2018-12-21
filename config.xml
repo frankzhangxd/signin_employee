@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ca.dmscorp.signmein" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Sign Me In</name>
+    <description>
+        DMS Application for SignIn.
+    </description>
+    <author email="f.zhang@dmscorp.ca" href="http://dmscorp.ca">
+        DMS IT Development
+    </author>
+    <!--
+    <content src="index.html" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    -->
+    <!-- Android SECTION -->
+    <platform name="android" />
+    
+    <preference name="permissions"                value="none"/>
+    <preference name="phonegap-version" value="cli-8.0.0" />
+
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
+    <!--<preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />-->
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+    <preference name="auto-hide-splash-screen"    value="true" /> 
+    <preference name="exit-on-suspend" value="false" />
+
+    <plugin name="cordova-plugin-camera" spec="2.4.1">
+        <param name="CAMERA_USAGE_DESCRIPTION" value="We are using the Camera for taking a photo to approve your sign in/out." />
+        <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We are using the Photo Library for uploading a photo to approve your sign in/out." />
+    </plugin>
+    <plugin name="cordova-plugin-contacts" spec="2.3.1" />
+    <plugin name="cordova-plugin-device" spec="1.1.7" />
+    <plugin name="cordova-plugin-dialogs" spec="1.3.4" />
+    <plugin name="cordova-plugin-media" spec="2.4.1" />
+    <plugin name="cordova-plugin-network-information" spec="1.3.4" />
+    <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
+    <plugin name="cordova-plugin-vibration" spec="2.1.6" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
+    <plugin name="cordova-plugin-x-toast" spec="2.6.2" />
+    <plugin name="cordova-plugin-camera-preview" />
+    <plugin name="cordova-plugin-geolocation" spec="2.4.3" />
+    <!--
+    <plugin name="cordova-plugin-mauron85-background-geolocation" spec="2.0.0">
+        <variable name="ALWAYS_USAGE_DESCRIPTION" value="This app requires background tracking enabled" />
+    </plugin>
+    -->
+    <plugin name="cordova-plugin-background-fetch" source="npm" spec="5.4.1"/> 
+
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    
+    <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
+    <icon src="res/icon/ios/icon-small.png" width="29" height="29"/>
+    <icon src="res/icon/ios/icon-small@2x.png" width="58" height="58"/>
+    <icon src="res/icon/ios/icon-small@3x.png" width="87" height="87"/>
+    <icon src="res/icon/ios/icon-small-40.png" width="40" height="40"/>
+    <icon src="res/icon/ios/icon-small-40@2x.png" width="80" height="80"/>
+    <icon src="res/icon/ios/icon-small-40@3x.png" width="120" height="120"/>
+    <icon src="res/icon/ios/icon-small-50.png" width="50" height="50"/>
+    <icon src="res/icon/ios/icon-small-50@2x.png" width="100" height="100"/>
+    <icon src="res/icon/ios/icon.png" width="57" height="57"/>
+    <icon src="res/icon/ios/icon@2x.png" width="114" height="114"/>
+    <icon src="res/icon/ios/icon-60.png" width="60" height="60"/>
+    <icon src="res/icon/ios/icon-60@2x.png" width="120" height="120"/>
+    <icon src="res/icon/ios/icon-60@3x.png" width="180" height="180"/>
+    <icon src="res/icon/ios/icon-72.png" width="72" height="72"/>
+    <icon src="res/icon/ios/icon-72@2x.png" width="144" height="144"/>
+    <icon src="res/icon/ios/icon-76.png" width="76" height="76"/>
+    <icon src="res/icon/ios/icon-76@2x.png" width="152" height="152"/>
+    <icon src="res/icon/ios/icon-167.png" width="167" height="167"/>
+    <icon src="res/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
+    
+    <splash platform="android" qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash platform="android" qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash platform="android" qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash platform="android" qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+     
+    <splash platform="android" qualifier="land-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash platform="android" qualifier="land-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash platform="android" qualifier="land-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash platform="android" qualifier="land-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    
+    <splash src="res/screen/ios/Default@2x~iphone~anyany.png"/>
+    <splash src="res/screen/ios/Default@2x~iphone~comany.png"/>
+    <splash src="res/screen/ios/Default@3x~iphone~anyany.png"/>
+    <splash src="res/screen/ios/Default@3x~iphone~comany.png"/>
+    <splash src="res/screen/ios/Default@2x~ipad~anyany.png"/>
+    <splash src="res/screen/ios/Default@2x~ipad~comany.png"/>    
+    
+    <splash src="splash.png" />
+    <preference name="SplashScreenDelay" value="5000" />
+    
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

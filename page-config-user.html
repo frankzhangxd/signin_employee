@@ -1,0 +1,87 @@
+<!DOCTYPE HTML><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+<title>Dependable Mechanical Systems Inc. - Sign In</title>
+
+<link rel="stylesheet" href="themes/signin.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+<script src="scripts/jquery-1.11.1.min.js"></script>
+<script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" src="scripts/config-user.js"></script>
+</head>
+<body> 
+
+<div id="preloader">
+	<div id="status">
+    	<p class="center-text">
+			Loading the content...
+            <em>Loading depends on your connection speed!</em>
+        </p>
+    </div>
+</div>
+
+<div data-role="page">
+    <div data-role="header">
+    	<h1>Employee Configuration</h1>
+        <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-btn-icon-notext ui-icon-home"></a>
+    	<a href="#" class="ui-btn ui-btn-inline ui-icon-gear ui-btn-icon-notext ui-btn-right"></a>
+    </div>
+
+	<div role="main" class="ui-content">
+        <select id="list">
+            <option value="">Employee</option>
+        </select>
+        <input type="hidden" id="personid" value="" />
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <div class="ui-field-contain">
+                <label for="textinput-fc">FIRSTNAME:</label>
+                <input type="text" id="fname" value="" />
+                </div>
+            </li>
+            <li>
+                <div class="ui-field-contain">
+                <label for="textinput-fc">LASTNAME:</label>
+                <input type="text" id="lname" value="" />
+                </div>
+            </li>
+            <li>
+                <div class="ui-field-contain">
+                <label for="textinput-fc">JOB TITLE:</label>
+                <input type="text" id="jobtitle" value="" />
+                </div>
+            </li>
+            <li>
+                <div class="ui-field-contain">
+                <label for="textinput-fc">MOBILE #:</label>
+                <input type="text" id="mobile" value="" />
+                </div>
+            </li>
+        </ul>
+	</div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <a href="#" class="ui-btn ui-corner-all ui-btn-b">Submit</a>
+    </div>
+</div><!-- /page -->
+</body>
+<style type="text/css">
+    .ui-input-text{
+        border: 0;
+        box-shadow: none;
+        border-bottom: 1px solid;
+    }
+    .ui-field-contain{
+        margin: 0;
+    }
+    .ui-field-contain label, .ui-input-text{
+        display: inline-block !important;
+        font-size: 12px;
+    }
+    .ui-field-contain label{
+        font-weight: 600;
+    }
+</style>

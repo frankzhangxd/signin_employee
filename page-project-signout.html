@@ -1,0 +1,49 @@
+<!DOCTYPE HTML><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+<title>Dependable Mechanical Systems Inc. - Sign In</title>
+
+<link rel="stylesheet" href="themes/signin.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+<script src="scripts/jquery-1.11.1.min.js"></script>
+<script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" src="scripts/project-signout.js"></script>
+</head>
+<body> 
+
+<div id="preloader">
+	<div id="status">
+    	<p class="center-text">
+			Loading the content...
+            <em>Loading depends on your connection speed!</em>
+        </p>
+    </div>
+</div>
+
+<div data-role="page">
+    <div data-role="header">
+    	<h1>DMS EMPLOYEE SIGN OUT</h1>
+        <a href="index-user.html" class="ui-btn-left ui-btn ui-btn-inline ui-btn-icon-notext ui-icon-home"></a>
+    	<a href="#" class="ui-btn ui-btn-inline ui-icon-edit ui-btn-icon-notext ui-btn-right"></a>
+    </div>
+	<div role="main" class="ui-content">
+        <p class="message">Please select a project from the list below</p>
+        <select id="list">
+            <option value=""></option>
+        </select>
+        <p class="message">Reason for leaving: </p>
+        <select id="reason" class="form-control">
+            <option value="1">End of Day</option>
+            <option value="9">For Business (Meeting/Purchasing/Going to another site, etc.)</option>
+        </select>
+        <input type="hidden" id="company" value="DMS" />
+	</div><!-- /content -->
+    <div data-role="footer" data-position="fixed">
+        <a href="#" class="ui-btn ui-corner-all ui-btn-b">Sign Out</a>
+    </div>
+</div><!-- /page -->
+</body>
