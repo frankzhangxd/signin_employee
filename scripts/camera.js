@@ -140,7 +140,7 @@ var DEMODB = openDatabase('LOCALDB', '1.0', 'Local Database', 5 * 1024 * 1024);
             var fd = new FormData();
             fd.append("file", DataBlob);
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://www.dmscorp.ca/pm/services/upload', true);
+            xhr.open('POST', 'https://www.dmscorp.ca/pm/services/upload?plat='+device.platform, true);
             xhr.onload = function (oEvent) {
                 if (this.status == 200) {
                     var resp = JSON.parse(this.response);
