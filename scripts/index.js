@@ -42,6 +42,8 @@ var DEMODB = openDatabase('LOCALDB', '1.0', 'Local Database', 5 * 1024 * 1024);
                                         }, function (t, e) {console.log(e.message);}); 
                                	    });
                                	});
+                            }else{
+                                window.location.replace("page-config-user.html");
                             }
                         }, function (t, e) {console.log(e.message);})
                     }, function (t, e) {console.log(e.message);}); 
@@ -67,7 +69,6 @@ var DEMODB = openDatabase('LOCALDB', '1.0', 'Local Database', 5 * 1024 * 1024);
     function createTables(){
         DEMODB.transaction(
             function (transaction) {
-                //transaction.executeSql('DROP TABLE IF EXISTS config', [] , function (t, r) {console.log("Dropped");}, function (t, e) {console.log(e.message);});
                 transaction.executeSql('CREATE TABLE IF NOT EXISTS config (uID TEXT NOT NULL, type INTEGER, meta TEXT);');
                 //activity: 0 sign-in; 1 sign-out
                 //transaction.executeSql('DROP TABLE IF EXISTS visit_log', [] , function (t, r) {console.log("Dropped");}, function (t, e) {console.log(e.message);});
